@@ -1,0 +1,26 @@
+{
+    "lastUpdated": -8584840956269569183,
+    "profileId": "Joda",
+    "numeroEjemplo": 0,
+    "camPos": {
+        "x": -98.05767059326172,
+        "y": 1.0,
+        "z": 101.94842529296875
+    },
+    "accion": {
+        "keys": [
+            "ae059b79-e9cb-44b2-939b-6146f20d2a42",
+            "ff29faaa-7d5f-48a5-9f4b-69fb73137c45",
+            "3ecf3f6f-8fb5-4be3-a710-d53048c0c4b0",
+            "17de505a-d03a-473a-95a5-b77f10a036f2",
+            "f3fc18f3-22e1-453f-b56e-672874e14a41"
+        ],
+        "values": [
+            false,
+            false,
+            false,
+            false,
+            false
+        ]
+    }
+}

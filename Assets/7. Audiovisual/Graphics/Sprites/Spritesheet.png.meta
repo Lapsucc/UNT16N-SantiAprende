@@ -1,0 +1,1098 @@
+fileFormatVersion: 2
+guid: 011d0f27b7229ec4fbb4b9d6bb752898
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8633881525917383573
+    second: Logo
+  - first:
+      213: -1771866121167276815
+    second: Iso
+  - first:
+      213: 2091829175261615561
+    second: Close
+  - first:
+      213: 756911166660455246
+    second: Toys
+  - first:
+      213: 403005533434085257
+    second: WhiteButton
+  - first:
+      213: 6961653080833796888
+    second: Back
+  - first:
+      213: 6266472923241529454
+    second: Options
+  - first:
+      213: -5282911695883833476
+    second: Button
+  - first:
+      213: 7021449457718125206
+    second: Prev
+  - first:
+      213: 7357123456376359846
+    second: Next
+  - first:
+      213: -7343860702648896561
+    second: Right
+  - first:
+      213: -3531878321590394162
+    second: Wrong
+  - first:
+      213: -4888718896546230129
+    second: Accept
+  - first:
+      213: 2118958311618589481
+    second: Cancel
+  - first:
+      213: 3228903892712671954
+    second: Play
+  - first:
+      213: -513590313336307935
+    second: TextBox
+  - first:
+      213: 1238036043553056152
+    second: Continue
+  - first:
+      213: -1623444342149152459
+    second: ComboBox
+  - first:
+      213: -1125653685376602382
+    second: CheckBox
+  - first:
+      213: 8527111519951476930
+    second: MainPanel
+  - first:
+      213: -7490898752223310767
+    second: MainContainer
+  - first:
+      213: 6288659706726585256
+    second: MiniContainer
+  - first:
+      213: -2022454291514961620
+    second: Container
+  - first:
+      213: -3831202356669062874
+    second: MainEdge
+  - first:
+      213: 8670926691811076372
+    second: Return
+  - first:
+      213: -6512771319330908805
+    second: WhiteContainer
+  - first:
+      213: -1260317311526373650
+    second: Tab
+  - first:
+      213: 7419593473033909056
+    second: Maindge
+  - first:
+      213: 4123474909421625494
+    second: TabEdge
+  - first:
+      213: 4583289673117313467
+    second: TextEdge
+  - first:
+      213: 5399601884874693798
+    second: TextContainer
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Logo
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1248
+        width: 1044
+        height: 772
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bfc19e085b1d770800000000000000
+      internalID: 8633881525917383573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iso
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1247
+        width: 767
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4764a86211967e0800000000000000
+      internalID: -1771866121167276815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 1936
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5544a4d8ba70d10800000000000000
+      internalID: 2091829175261615561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toys
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 1742
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ba25f12b6118a00800000000000000
+      internalID: 756911166660455246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteButton
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 1583
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 17, y: 17, z: 17, w: 17}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ffadeb563c79500800000000000000
+      internalID: 403005533434085257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 1411
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b2a94b792cc9060800000000000000
+      internalID: 6961653080833796888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 1239
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e604a682cebf6f650800000000000000
+      internalID: 6266472923241529454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1063
+        width: 380
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 10, z: 10, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f661b7dc35fa6b0800000000000000
+      internalID: -5282911695883833476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prev
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1076
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692e5af9413317160800000000000000
+      internalID: 7021449457718125206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Next
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1076
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abc10acdc0c91660800000000000000
+      internalID: 7357123456376359846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1066
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc379a2b99d551a90800000000000000
+      internalID: -7343860702648896561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wrong
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1066
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2a3b3116f3cfec0800000000000000
+      internalID: -3531878321590394162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Check
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1061
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f805f9ca018c72cb0800000000000000
+      internalID: -4888718896546230129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cancel
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 1064
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92333e19b5d086d10800000000000000
+      internalID: 2118958311618589481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Play
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1061
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dac303abfe5fcc20800000000000000
+      internalID: 3228903892712671954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextBox
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 1146
+        width: 320
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 10, z: 10, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ff185c45c5fd8f0800000000000000
+      internalID: -513590313336307935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 1065
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8952c13e8336e2110800000000000000
+      internalID: 1238036043553056152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComboBox
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 1065
+        width: 246
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 14, y: 15, z: 15, w: 15}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5310591e8fd5879e0800000000000000
+      internalID: -1623444342149152459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CheckBox
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 1065
+        width: 70
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fea407efefd060f0800000000000000
+      internalID: -1125653685376602382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainPanel
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 381
+        width: 896
+        height: 677
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 35, y: 35, z: 35, w: 35}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c859d2bfb2665670800000000000000
+      internalID: 8527111519951476930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainContainer
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 787
+        width: 265
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 20}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c0059f54bfa0890800000000000000
+      internalID: -7490898752223310767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniContainer
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 607
+        width: 260
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 17, y: 17, z: 17, w: 17}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a310cc3faec54750800000000000000
+      internalID: 6288659706726585256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Container
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 557
+        width: 265
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 20}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2159cb898ccee3e0800000000000000
+      internalID: -2022454291514961620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainEdge
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 505
+        width: 265
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 20}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621e91451c5d4dac0800000000000000
+      internalID: -3831202356669062874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Return
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 436
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4192adab2e1555870800000000000000
+      internalID: 8670926691811076372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteContainer
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 277
+        width: 345
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75ddefbdfcfd95a0800000000000000
+      internalID: -6512771319330908805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tab
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 401
+        width: 296
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6f1362514728ee0800000000000000
+      internalID: -1260317311526373650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maindge
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 280
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 17, y: 17, z: 17, w: 17}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0433ef9f3f0b7f660800000000000000
+      internalID: 7419593473033909056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TabEdge
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 301
+        width: 296
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690ef404596893930800000000000000
+      internalID: 4123474909421625494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextEdge
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 22
+        width: 630
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 17, y: 17, z: 17, w: 17}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9afd4acad1b9f30800000000000000
+      internalID: 4583289673117313467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextContainer
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 22
+        width: 630
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 17, y: 17, z: 17, w: 17}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac5c745e4d3fea40800000000000000
+      internalID: 5399601884874693798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackGroundBox
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 22
+        width: 630
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 25, y: 25, z: 25, w: 25}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995bf14d5e38425418c8b0fd1e8b1732
+      internalID: 532245068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CheckButtonS
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 210
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0021826824f5a488650dbc7ba66145
+      internalID: -1160328620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InvalidateButtonS
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 210
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0c947a0bde1d54abe1cde455e935ed
+      internalID: 1553349334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackButtonS
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 210
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9deb53d85ab2d3b4f9140dab7fca0d4d
+      internalID: 861158468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnButtonS
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 210
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf348006653bd64fbc9e30d8bb1b4aa
+      internalID: 1399160729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpcionsButtonS
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 210
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7649f04070770d74e8238d201c5751bd
+      internalID: 2116461019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NextButtonS
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 210
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e290e891fc919d24681924612c919b7e
+      internalID: -1801381723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayButtonS
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 210
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993e292695d4a8d41a24e7d8956269f5
+      internalID: -952417872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Back: 6961653080833796888
+      BackButtonS: 861158468
+      BackGroundBox: 532245068
+      Button: -5282911695883833476
+      Cancel: 2118958311618589481
+      Check: -4888718896546230129
+      CheckBox: -1125653685376602382
+      CheckButtonS: -1160328620
+      Close: 2091829175261615561
+      ComboBox: -1623444342149152459
+      Container: -2022454291514961620
+      Continue: 1238036043553056152
+      InvalidateButtonS: 1553349334
+      Iso: -1771866121167276815
+      Logo: 8633881525917383573
+      MainContainer: -7490898752223310767
+      MainEdge: -3831202356669062874
+      MainPanel: 8527111519951476930
+      Maindge: 7419593473033909056
+      MiniContainer: 6288659706726585256
+      Next: 7357123456376359846
+      NextButtonS: -1801381723
+      OpcionsButtonS: 2116461019
+      Options: 6266472923241529454
+      Play: 3228903892712671954
+      PlayButtonS: -952417872
+      Prev: 7021449457718125206
+      Return: 8670926691811076372
+      ReturnButtonS: 1399160729
+      Right: -7343860702648896561
+      Tab: -1260317311526373650
+      TabEdge: 4123474909421625494
+      TextBox: -513590313336307935
+      TextContainer: 5399601884874693798
+      TextEdge: 4583289673117313467
+      Toys: 756911166660455246
+      WhiteButton: 403005533434085257
+      WhiteContainer: -6512771319330908805
+      Wrong: -3531878321590394162
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
