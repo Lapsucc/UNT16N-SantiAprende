@@ -1,0 +1,18 @@
+using System.Collections.Generic;
+using Systems.Persistence;
+
+namespace Systems.Persistance
+{
+    public interface IDataService
+    {
+        void Save(GameData data, bool overwrite = true);
+        GameData Load(string name);
+        void Delete(string name);
+        void DeleteAll();
+
+        IEnumerable<string> ListSaves();
+    }
+
+
+
+}
