@@ -38,7 +38,7 @@ public class InterestBarValueController : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
+        {            
             positiveBarValue();
         }
 
