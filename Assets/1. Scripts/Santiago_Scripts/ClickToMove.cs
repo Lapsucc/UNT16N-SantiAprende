@@ -35,4 +35,10 @@ public class ClickToMove : MonoBehaviour
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
     }
+
+    public bool IsMoving() // Comprobar desde afuera si se esta moviendo.
+    {
+        return navMeshAgent.velocity.sqrMagnitude > 0.01f; 
+    }
+
 }
