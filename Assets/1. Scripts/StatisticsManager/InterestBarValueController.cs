@@ -21,6 +21,7 @@ public class InterestBarValueController : MonoBehaviour
     public float value;
 
     public float timerNoActions;
+    public float timerNoActionsIni;
     public bool inactivity = false;
 
     void Start()
@@ -28,31 +29,41 @@ public class InterestBarValueController : MonoBehaviour
         isLow = false;
         isMid = false;
         isHigh = false;
+
+        timerNoActionsIni = timerNoActions;
     }
 
     void Update()
     {
         value = sliderValue.value;
-               
-        timerNoActions -= Time.deltaTime;
-
-        if (timerNoActions <= 0 && !inactivity)
-        {
-            //
-
-            inactivity = true;
-        }
-
 
         #region Logica - Reduccion Valor Barra por Inactividad
+        //POR REVISAR EFECTIVIDAD SCRIPT
+        if (!psicologa.IsMoving() && timerNoActions >= 0.01)
+        {
+            timerNoActions -= Time.deltaTime;
+        }
 
-        if (value > 0.1f && !psicologa.IsMoving())  // REDUCCION DEL VALOR DEL SLIDER CON EL TIEMPO & Si NO SE ESTA MOVIENDO LA PSICOLOGA
+        if (psicologa.IsMoving())
+        {
+            timerNoActions = timerNoActionsIni;
+            inactivity = false;
+        }
+
+        if (timerNoActions <= 0.01 && !inactivity)
+        {
+            //
+            Debug.Log("El timer de inactividad esta en 0 y la inactividad es true");
+            inactivity = true;
+            timerNoActions = 0;
+        }              
+
+        if (value > 0.1f && inactivity)  // REDUCCION DEL VALOR DEL SLIDER CON EL TIEMPO & Si NO SE ESTA MOVIENDO LA PSICOLOGA
         {
             value -= reductionSpeed * Time.deltaTime;
             if (value < 0.1f) value = 0.1f;
             sliderValue.value = value;
         }
-
         #endregion
 
         if (Input.GetKeyDown(KeyCode.UpArrow))

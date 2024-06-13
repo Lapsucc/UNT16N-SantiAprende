@@ -3812,7 +3812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 0}
   smoothTime: 10
-  orthoSizeNormal: 6
+  orthoSizeNormal: 10
   "orthoSizeNi\xF1o": 4
 --- !u!1 &1070736298
 GameObject:
@@ -7183,6 +7183,9 @@ MonoBehaviour:
   isMid: 0
   isHigh: 0
   value: 0
+  timerNoActions: 5
+  timerNoActionsIni: 0
+  inactivity: 0
 --- !u!1 &2004812976
 GameObject:
   m_ObjectHideFlags: 0
