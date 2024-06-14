@@ -30,7 +30,7 @@ public class ClickToMove : MonoBehaviour
                 {
                     Debug.Log("Haciendo clic sobre " + hit.collider.gameObject.name);
                     interactivoEncontrado = true;
-                    // Llamar a OnMouseDown() manualmente
+                    // Comprobar el Onmouse BORRAR DESPUES - Depuracion
                     hit.collider.gameObject.SendMessage("OnMouseDown", SendMessageOptions.DontRequireReceiver);
                     break;
                 }
@@ -59,6 +59,11 @@ public class ClickToMove : MonoBehaviour
         var results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
+    }
+
+    public void MoveToActionPosition(Vector3 actionPosition)
+    {
+        navMeshAgent.SetDestination(actionPosition);
     }
 
     public bool IsMoving()

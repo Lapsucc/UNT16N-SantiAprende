@@ -43,18 +43,25 @@ public class MainMenuT : Menu
             addDataMenu.SetActive(true);
             this.DeactivateMenu();
         }
-        else { Debug.Log("Dando Click en Nuevo Juego - Slots Llenos");
-        }        
+        else
+        {
+            Debug.Log("Dando Click en Nuevo Juego - Slots Llenos");
+        }
     }
 
     public void OnLoadGameClicked()
-    { 
+    {
         saveSlotsMenu.ActivateMenu(true);
         this.DeactivateMenu();
     }
 
     public void OnContinueGameClicked()
     {
+        // REVISAR PARA AÑADIR DATO DE PERFIL DESDE EL MAIN MENU
+        PlayerDataStatic.Algo = "sfbdfnsdjknfklsdnfklnsdlk";
+        PlayerDataStatic.barValue = 1;
+
+
         DisableMenuButtons();
         SceneManager.LoadSceneAsync("EscenaGYM");
     }

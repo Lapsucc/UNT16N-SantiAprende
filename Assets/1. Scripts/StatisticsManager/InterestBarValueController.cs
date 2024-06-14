@@ -31,14 +31,30 @@ public class InterestBarValueController : MonoBehaviour
         isHigh = false;
 
         timerNoActionsIni = timerNoActions;
+
+        sliderValue.value = PlayerDataStatic.barValue;
     }
 
     void Update()
     {
         value = sliderValue.value;
 
+        #region Pruebas
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            //positiveBarValue(0.5f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            //negativeBarValue(0.5f);
+        }
+        #endregion
+
         #region Logica - Reduccion Valor Barra por Inactividad
-        //POR REVISAR EFECTIVIDAD SCRIPT
+        
+        // ***************** POR REVISAR
+
         if (!psicologa.IsMoving() && timerNoActions >= 0.01)
         {
             timerNoActions -= Time.deltaTime;
@@ -66,15 +82,9 @@ public class InterestBarValueController : MonoBehaviour
         }
         #endregion
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            //positiveBarValue(0.5f);
-        }
+        // ************************************************************************
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            //negativeBarValue(0.5f);
-        }
+        #region Logica - Actualizacion Valores de Exito - Barra de Interes.
 
         // Logica de comprobacion de cambio de estado en la barra de interes. Estado anterior de CADA ESTADO de interes.
         bool wasLow = isLow;
@@ -115,7 +125,11 @@ public class InterestBarValueController : MonoBehaviour
         {
             OnHighInterestValue();
         }
+
+        #endregion
     }
+
+
 
     public void OnLowInterestValue()
     {
@@ -140,8 +154,7 @@ public class InterestBarValueController : MonoBehaviour
         probabilityValue.probability2 = 0.10f;
         probabilityValue.probability3 = 0.10f;
     }
-
-    // **********************************************************************
+   
     public IEnumerator ChangeBarValueSmoothly(float changeAmount, float durationAction) // Corrutina para cambiar el valor de la barra de manera suave
     {
         float targetValue = Mathf.Clamp(sliderValue.value + changeAmount, 0, 1); //Valor a modificar
@@ -161,15 +174,21 @@ public class InterestBarValueController : MonoBehaviour
         sliderValue.value = targetValue;
     }
 
-    public void negativeBarValue(float value, float duration)
+    public void NegativeBarValue(float value, float duration)
     {
         Debug.Log("Reduciendo Valor Barra Interes");
         StartCoroutine(ChangeBarValueSmoothly(-value, duration)); // Llamar a la corrutina con un valor negativo
     }
 
-    public void positiveBarValue(float value, float duration)
+    public void PositiveBarValue(float value, float duration)
     {
         Debug.Log("Aumentando Valor Barra Interes");
         StartCoroutine(ChangeBarValueSmoothly(value, duration)); // Llamar a la corrutina con un valor positivo
+    }
+
+    public void ReduceBarValue()
+    {
+        Debug.Log("Reduciendo Valor por Acercamiento");
+        sliderValue.value -= 0.0005f;
     }
 }

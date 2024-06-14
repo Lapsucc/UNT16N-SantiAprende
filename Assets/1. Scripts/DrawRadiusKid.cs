@@ -1,15 +1,12 @@
 using UnityEngine;
 
 [ExecuteAlways]
-public class DrawRadius : MonoBehaviour
+public class DrawRadiusKid : MonoBehaviour
 {
     public float radius = 1.0f;
     public Color gizmoColor;
     public int segments = 100;
-    private void Start()
-    {
-        Debug.LogWarning("Mostrando informacion persistente: " + PlayerDataStatic.Algo.ToUpper());
-    }
+
     void OnDrawGizmos()
     {
         Color originalColor = Gizmos.color;
