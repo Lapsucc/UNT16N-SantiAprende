@@ -68,12 +68,12 @@ public class InterestBarValueController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            positiveBarValue(0.5f);
+            //positiveBarValue(0.5f);
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            negativeBarValue(0.5f);
+            //negativeBarValue(0.5f);
         }
 
         // Logica de comprobacion de cambio de estado en la barra de interes. Estado anterior de CADA ESTADO de interes.
@@ -142,11 +142,11 @@ public class InterestBarValueController : MonoBehaviour
     }
 
     // **********************************************************************
-    public IEnumerator ChangeBarValueSmoothly(float changeAmount) // Corrutina para cambiar el valor de la barra de manera suave
+    public IEnumerator ChangeBarValueSmoothly(float changeAmount, float durationAction) // Corrutina para cambiar el valor de la barra de manera suave
     {
         float targetValue = Mathf.Clamp(sliderValue.value + changeAmount, 0, 1); //Valor a modificar
         float startValue = sliderValue.value;
-        float duration = 0.5f;               //Velocidad con la que cambia de valor.
+        float duration = durationAction;               //Velocidad con la que cambia de valor.
         float elapsed = 0f;
 
         while (elapsed < duration) // INTENTO DE HACER EL MOVIMIENTO DE LA BARRA MAS "SMOOTH"
@@ -161,15 +161,15 @@ public class InterestBarValueController : MonoBehaviour
         sliderValue.value = targetValue;
     }
 
-    public void negativeBarValue(float value)
+    public void negativeBarValue(float value, float duration)
     {
         Debug.Log("Reduciendo Valor Barra Interes");
-        StartCoroutine(ChangeBarValueSmoothly(-value)); // Llamar a la corrutina con un valor negativo
+        StartCoroutine(ChangeBarValueSmoothly(-value, duration)); // Llamar a la corrutina con un valor negativo
     }
 
-    public void positiveBarValue(float value)
+    public void positiveBarValue(float value, float duration)
     {
         Debug.Log("Aumentando Valor Barra Interes");
-        StartCoroutine(ChangeBarValueSmoothly(value)); // Llamar a la corrutina con un valor positivo
+        StartCoroutine(ChangeBarValueSmoothly(value, duration)); // Llamar a la corrutina con un valor positivo
     }
 }

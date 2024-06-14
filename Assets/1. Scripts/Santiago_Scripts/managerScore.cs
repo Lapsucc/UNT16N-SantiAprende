@@ -9,13 +9,14 @@ public class managerScore : MonoBehaviour
     public float chocolate = 0.1f;
     public float peluche = -0.1f;
 
-    public Slider barraProgreso; // Referencia al Slider que mostrará los puntos
+    public Slider barraProgreso; 
+
     public void OnButtonClickChocolate()
     {
         
-        puntos= puntos + chocolate; // Aumentar la cantidad de puntos cada vez que se toca el botón
+        puntos= puntos + chocolate;
         Debug.Log("chocolate");
-        ActualizarUI(); // Actualizar la interfaz de usuario
+        ActualizarUI();
     }
     public void OnButtonClickpeluche()
     {
@@ -24,9 +25,8 @@ public class managerScore : MonoBehaviour
         Debug.Log("peluche");
         ActualizarUI(); // Actualizar la interfaz de usuario
     }
-    void ActualizarUI()
-    {
-        // Actualizar el valor del Slider para reflejar los puntos
+    void ActualizarUI() // SUBIR O BAJAR PUNTOS
+    {        
         barraProgreso.value = puntos;
     }
 }

@@ -12,6 +12,8 @@ TagManager:
   - HitBox
   - Kid
   - MainMenuUI
+  - Button
+  - InteractiveObjects
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - NPC
   - Suelo
   - Paredes
-  - 
+  - ObjetosAtencion
   - 
   - 
   - 
