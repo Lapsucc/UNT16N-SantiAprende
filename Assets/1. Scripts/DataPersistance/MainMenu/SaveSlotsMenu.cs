@@ -62,8 +62,8 @@ public class SaveSlotsMenu : Menu
                     // Combinacion 2 tutoriales. PARA USAR PERFILES y EL SAVE DATA.
                     Debug.Log("Se SobreEscribio el perfil: " + saveSlot.nombrePerfil.text + " De la carpeta: " + saveSlot.GetProfileId());
 
-                    ProfileStorage.DeleteProfile(saveSlot.GetProfileIdToDelete() +".xml");         // Borrar Archivo
-                    ProfileStorage.DeleteProfile(saveSlot.GetProfileIdToDelete() +".xml.meta");  // Borrar Archivo.meta
+                    ProfileStorage.DeleteProfile(saveSlot.GetProfileIdToDelete() +".xml");        // Borrar Archivo
+                    ProfileStorage.DeleteProfile(saveSlot.GetProfileIdToDelete() +".xml.meta");   // Borrar Archivo.meta
                     DataPersistenceManager.instance.DeleteProfileData(saveSlot.GetProfileId());   // Borrar Carpeta Enumerada 
 
                     DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileId()); // AQUI HAY ALGOOOOOO                    

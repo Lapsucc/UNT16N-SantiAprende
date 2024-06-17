@@ -15,11 +15,11 @@ public class NewGameController : MonoBehaviour
     [SerializeField] public string profilename;
     [SerializeField] private PopUpController popUpController; //Para mensaje de Advertencia o PupUp
     
-    [SerializeField] private GameObject saveSlotMenu;
+    [SerializeField] private GameObject profileSelectMenu;
     [SerializeField] private GameObject addDataMenu;
     [SerializeField] private GameObject mainMenuT;
 
-    [SerializeField] private SaveSlotsMenu saveSlotsMenu;
+    [SerializeField] private SaveSlotsMenu saveSlotsMenu; //
     [SerializeField] private CheckFolders checkFolders;
 
     public UiController estaEnLoading;
@@ -56,19 +56,20 @@ public class NewGameController : MonoBehaviour
         }
         else
         {
-            saveSlotMenu.SetActive(true);
+            profileSelectMenu.SetActive(true);
             addDataMenu.gameObject.SetActive(false);
-            saveSlotsMenu.ActivateMenu(false);
+            //saveSlotsMenu.ActivateMenu(false);
             Generate(profilename);
+
             Debug.Log("Se Creo el perfil: " + ProfileStorage.s_currentProfile.name);
         }
     }
     // ************************************************************************************************************************************************************
-    public void testUpdate()
+    public void testUpdate() // TEST - BORRAR
     {
-        Debug.Log("Test Update en el Clear");
-        saveSlotMenu.SetActive(false);
-        saveSlotMenu.SetActive(true);
+        //Debug.Log("Test Update en el Clear");
+        //profileSelectMenu.SetActive(false);
+        //profileSelectMenu.SetActive(true);
     }
     // ************************************************************************************************************************************************************
     public void CheckSlotsAvailable()

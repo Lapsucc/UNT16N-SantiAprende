@@ -12,7 +12,7 @@ public class SaveSlot : MonoBehaviour
     [Header("Contenido")]
     [SerializeField] private GameObject noDataContent;
     [SerializeField] private GameObject hasDataContent;
-    [SerializeField] public TextMeshProUGUI nombrePerfil; // PARA MOSTRARLO EN EL MENU
+    [SerializeField] public TextMeshProUGUI nombrePerfil; // PARA MOSTRARLO EN EL MENU    
 
     [Header("Delete Button")]
     [SerializeField] public Button clearButton;

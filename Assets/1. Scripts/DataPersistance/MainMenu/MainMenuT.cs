@@ -58,9 +58,8 @@ public class MainMenuT : Menu
     public void OnContinueGameClicked()
     {
         // REVISAR PARA AÑADIR DATO DE PERFIL DESDE EL MAIN MENU
-        PlayerDataStatic.Algo = "sfbdfnsdjknfklsdnfklnsdlk";
-        PlayerDataStatic.barValue = 1;
-
+        // PlayerDataStatic.Algo = "sfbdfnsdjknfklsdnfklnsdlk";
+        // PlayerDataStatic.barValue = 1;
 
         DisableMenuButtons();
         SceneManager.LoadSceneAsync("EscenaGYM");
