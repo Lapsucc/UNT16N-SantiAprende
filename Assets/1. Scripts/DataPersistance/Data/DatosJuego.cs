@@ -8,21 +8,25 @@ public class DatosJuego
 {
     // Fecha
     public long lastUpdated;
-    // Profile name
+    // Profile name - CUENTA DE USUARIO
     public string profileId;
 
-    public int numeroEjemplo;    
+    public int numeroEjemplo;
 
     public Vector3 camPos; //posicion de objetos
 
     public SerializableDictionary<string, bool> accion; // Sera un boton en el canvas/panel
-    
+
+    public int santiProfileId;
+
+
     public DatosJuego()
     {
         profileId = "";
         this.numeroEjemplo= 0;
-        camPos = new Vector3(-100,1,100); // ubicacion inicial o de NEW GAME
+        camPos = new Vector3(-100,1,100);                           // ubicacion inicial o de NEW GAME
         accion = new SerializableDictionary<string, bool>();
+        this.santiProfileId= 0;        
     }
 }
 

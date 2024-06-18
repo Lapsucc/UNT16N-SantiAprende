@@ -25,29 +25,29 @@ public class AproachDecreseValueController : MonoBehaviour
 
                 if (distance > 10)
                 {
-                    color.gizmoColor = Color.green;
-                    Debug.Log("Fuera de rango");
+                    //Debug.Log("Fuera de rango");
+                    color.gizmoColor = Color.green;                    
                 }
                 else if (distance > 6 && distance <= 10)
                 {
-                    Debug.Log("Algo cerca");
-                    color.gizmoColor = Color.blue;
+                    //Debug.Log("Algo cerca");
+                    color.gizmoColor = Color.blue;                    
                 }
                 else if (distance > 0.1 && distance <= 5)
                 {
-                    Debug.Log("Muy cerca");
+                    //Debug.Log("Muy cerca");
                     color.gizmoColor = Color.red;
                     reducedValue.ReduceBarValue();
                     
                 }
                 else
                 {
-                    Debug.Log("Extremadamente cerca");
+                    //Debug.Log("Extremadamente cerca");
                 }
             }
             else
             {
-                Debug.LogWarning("psicologist no está asignado en el Inspector");
+                //Debug.LogWarning("psicologist no está asignado en el Inspector");
             }
         }
     }

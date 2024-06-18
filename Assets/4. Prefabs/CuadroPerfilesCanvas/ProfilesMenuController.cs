@@ -16,13 +16,15 @@ public class ProfilesMenuController : MonoBehaviour
     [SerializeField] private SaveSlotsMenu saveSlotsMenu;
     public GameObject profileMenu;
 
+    
+
     private void Start()
     {
         foreach (var item in profiles)
         {
             // Instanciar el prefab
             GameObject btn = Instantiate(prefab, perfParent);
-            Debug.Log("Instantiated button for profile: " + item.name);
+            // Debug.Log("Instantiated button for profile: " + item.name);
 
             // Configurar la imagen y el texto del botón
             btn.transform.GetChild(0).GetComponent<Image>().sprite = item.Foto;
@@ -46,8 +48,8 @@ public class ProfilesMenuController : MonoBehaviour
     }
 
     private void ChooseProfile(KidProfileMenu profileId)
-    {
-        PlayerDataStatic.profileID = profileId.ID;
+    {              
+        PlayerDataStatic.santiProfileID = profileId.ID;
         saveSlotsMenu.ActivateMenu(false);
         profileMenu.SetActive(false);
         //SceneManager.LoadSceneAsync("EscenaGYM");

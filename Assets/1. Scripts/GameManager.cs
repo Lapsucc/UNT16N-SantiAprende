@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int profileID;
-    void Start()
+    public santiProfileManager sProfileID;
+    public int santiProfileID;
+
+    private void Start()
     {
-        profileID = PlayerDataStatic.profileID;
+        Invoke("GetSantiIdGM", 0.5f);
     }
-    
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            Debug.Log("El prefil actual es: " + profileID);
+            Debug.Log("El prefil actual es: " + santiProfileID);
         }
+    }
+
+    public void GetSantiIdGM()
+    {
+        santiProfileID = sProfileID.santiProfileID;
     }
 }

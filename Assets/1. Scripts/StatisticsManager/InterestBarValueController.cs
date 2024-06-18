@@ -188,7 +188,7 @@ public class InterestBarValueController : MonoBehaviour
 
     public void ReduceBarValue()
     {
-        Debug.Log("Reduciendo Valor por Acercamiento");
+        //Debug.Log("Reduciendo Valor por Acercamiento");
         sliderValue.value -= 0.0005f;
     }
 }

@@ -6,5 +6,5 @@ public static class PlayerDataStatic
     public static GameObject prefabPlayer;
     public static float barValue;
 
-    public static int profileID;
+    public static int santiProfileID;
 }
