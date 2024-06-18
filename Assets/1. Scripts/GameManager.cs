@@ -14,10 +14,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Debug.Log("El prefil actual es: " + santiProfileID);
-        }
+
     }
 
     public void GetSantiIdGM()

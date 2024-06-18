@@ -10,6 +10,8 @@ public class ClickToMove : MonoBehaviour
     public LayerMask sueloLayer;
     public string objectTag; // Tag de los objetos interactivos
 
+    public int moveCounter;
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -19,6 +21,8 @@ public class ClickToMove : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !IsPointerOverUIObject())
         {
+            Debug.Log("Moviendome");
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray, Mathf.Infinity, clickableLayer | sueloLayer);
 
