@@ -1,9 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// En este script se plantea la logica para obtener la distancia a la que esta la Psicologa del Niño, asi
+/// se implementa una reduccion del valor de la barra de interes segun un rango de distancias.
+/// </summary>
 
 public class AproachDecreseValueController : MonoBehaviour
 {
+    [Header("Reduccion Valor Cercania")]
+
     public InterestBarValueController reducedValue;
     public GameObject psicologist;
     public DrawRadiusKid color;

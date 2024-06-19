@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// Cambios 1906 - Modificado para realizar movimiento hacia Accion.
+/// </summary>
 public class RandomMovement : MonoBehaviour
 {
     public float wanderRadius = 10f;
@@ -8,30 +11,42 @@ public class RandomMovement : MonoBehaviour
 
     private Transform target;
     private NavMeshAgent agent;
-    private float timer;
+    public float timer;
+
+    [Header("De Accion")]
+    public SantiInteractiveObjectController[] santiActions; // Array de objetos de acción
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         timer = wanderTimer;
         SetNewDestination();
-
     }
-
     void Update()
     {
         timer -= Time.deltaTime;
 
-        if (timer <= 0f)
+        // Verificar el estado de cada objeto de acción
+        foreach (var santiAction in santiActions)
         {
-            SetNewDestination();
-            timer = wanderTimer;
+            if (!santiAction.isSantiClose && !santiAction.isInAction && santiAction.isFree)
+            {
+                if (Vector3.Distance(transform.position, santiAction.santiAction.position) < santiAction.actionDistance)
+                {
+                    santiAction.isSantiClose = true;
+                    santiAction.isInAction = true;
+                    santiAction.isFree = false;
+                    SantiMoveToAction(santiAction.santiAction.position);
+                    return;
+                }
+            }
         }
-        if (timer <= 0f && agent.isStopped == true)
+
+        // Movimiento aleatorio si no se está interactuando con ningún objeto
+        if (timer <= 0f && agent.remainingDistance <= agent.stoppingDistance)
         {
             SetNewDestination();
             timer = wanderTimer;
-            agent.isStopped = false;
         }
     }
 
@@ -43,6 +58,10 @@ public class RandomMovement : MonoBehaviour
         NavMesh.SamplePosition(randomDirection, out hit, wanderRadius, 1);
         Vector3 finalPosition = hit.position;
         agent.SetDestination(finalPosition);
+    }
 
+    public void SantiMoveToAction(Vector3 santiActionPosition)
+    {
+        agent.SetDestination(santiActionPosition);
     }
 }
