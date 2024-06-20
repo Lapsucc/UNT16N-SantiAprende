@@ -9,11 +9,20 @@ public class deteccion : MonoBehaviour
 
     public void Update()
     {
-        float distance = Vector3.Distance(actionLocation.position, movePsic.gameObject.transform.position);
+       
+    }
+
+    private void OnMouseDown()
+    {                
+        movePsic.MoveToActionPosition(actionLocation.position);
+    }
+
+    /*
+      float distance = Vector3.Distance(actionLocation.position, movePsic.gameObject.transform.position);
 
         if (distance < 1 && !isClose)
         {
-            Debug.Log("Estoy cerca de caja reforzadores");
+            //Debug.Log("Estoy cerca de caja reforzadores");
             isClose = true;
             menuClic.SetActive(true);
         }
@@ -23,10 +32,6 @@ public class deteccion : MonoBehaviour
             isClose = false;
             menuClic.SetActive(false);
         }
-    }
 
-    private void OnMouseDown()
-    {                
-        movePsic.MoveToActionPosition(actionLocation.position);
-    }
+     * */
 }

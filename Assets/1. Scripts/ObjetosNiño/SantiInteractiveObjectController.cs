@@ -25,51 +25,57 @@ public class SantiInteractiveObjectController : MonoBehaviour
     {
         float distance = Vector3.Distance(santiAction.position, santiAgent.gameObject.transform.position);
 
-        if (distance < actionDistance && !isSantiClose && isFree && isObjectActive)
-        {            
-            StartCoroutine(OnActionObject());            
+        if (distance < actionDistance && isFree && isObjectActive)
+        {
+            isFree = false;
+            StartCoroutine(OnActionObject());
         }
 
-        if (distance < 1 && !isInAction)
-        {
-            StartCoroutine(WaitAndMove());
-            accionObjeto.PositiveBarValue(0.2f, 5);            
-        }
 
-        if (distance > actionDistance)
+
+        /*
+        if (distance > 1)
         {
-            isSantiClose = false;
             isInAction = false;
-            isFree = true;
         }
+        */
+
     }
 
     IEnumerator OnActionObject()
     {
-        isSantiClose = true;        
-        isFree = false;
-        santiAgent.SantiMoveToAction(santiAction.position);
-        yield return new WaitForSeconds(5);
+        float distance = Vector3.Distance(santiAction.position, santiAgent.gameObject.transform.position);
 
+        santiAgent.SantiMoveToAction(santiAction.position);
+        
+        if (distance < 1 && !isInAction)
+        {
+            isObjectActive = false;
+            StartCoroutine(WaitAndMove());
+        }
+        yield return new WaitForSeconds(15);
     }
 
     IEnumerator WaitAndMove()
-    {        
+    {
         isInAction = true;
-        isObjectActive = false;
-        isSantiClose = false;
-
-        yield return new WaitForSeconds(3);
                 
-        santiAgent.SantiMoveToAction(freeSantiAction.position);
+        if (isInAction)
+        {
+            accionObjeto.PositiveBarValue(0.2f, 5);
+            yield return new WaitForSeconds(5);
+        }
+
         isFree = true;
-        
-        yield return new WaitForSeconds(4);
+        isInAction = false;
+
         StartCoroutine(ActiveActionObject());
+        yield return new WaitForSeconds(1);
     }
 
     IEnumerator ActiveActionObject()
     {
+        // Wait for X seconds before reactivating the object
         yield return new WaitForSeconds(10);
         isObjectActive = true;
     }

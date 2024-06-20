@@ -26,23 +26,33 @@ public class RandomMovement : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
+        
         // Verificar el estado de cada objeto de acción
         foreach (var santiAction in santiActions)
         {
-            if (!santiAction.isSantiClose && !santiAction.isInAction && santiAction.isFree)
+            //if (!santiAction.isSantiClose && !santiAction.isInAction && santiAction.isFree)
+            if (!santiAction.isInAction && santiAction.isFree)
             {
                 if (Vector3.Distance(transform.position, santiAction.santiAction.position) < santiAction.actionDistance)
                 {
-                    santiAction.isSantiClose = true;
-                    santiAction.isInAction = true;
-                    santiAction.isFree = false;
-                    SantiMoveToAction(santiAction.santiAction.position);
+                    //santiAction.isSantiClose = true;
+                    //santiAction.isInAction = true;
+                    //santiAction.isFree = false;
+                    //SantiMoveToAction(santiAction.santiAction.position);
                     return;
                 }
             }
+
+            if (timer <= 0f && !santiAction.isInAction && santiAction.isFree)
+            {
+                SetNewDestination();
+                timer = wanderTimer;
+            }
         }
 
+
         // Movimiento aleatorio si no se está interactuando con ningún objeto
+        //if (timer <= 0f && agent.remainingDistance <= agent.stoppingDistance)
         if (timer <= 0f && agent.remainingDistance <= agent.stoppingDistance)
         {
             SetNewDestination();
@@ -62,6 +72,7 @@ public class RandomMovement : MonoBehaviour
 
     public void SantiMoveToAction(Vector3 santiActionPosition)
     {
+        Debug.Log("MOVIENDOSE");
         agent.SetDestination(santiActionPosition);
     }
 }
