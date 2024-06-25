@@ -13,6 +13,8 @@ public class AproachDecreseValueController : MonoBehaviour
     public GameObject psicologist;
     public DrawRadiusKid color;
 
+    public float distanceSantiReaction;
+
     public bool isSociable = true;
 
     void Start()
@@ -28,17 +30,17 @@ public class AproachDecreseValueController : MonoBehaviour
             {
                 float distance = Vector3.Distance(transform.position, psicologist.transform.position);
 
-                if (distance > 10)
+                if (distance > distanceSantiReaction)
                 {
                     //Debug.Log("Fuera de rango");
                     color.gizmoColor = Color.green;                    
                 }
-                else if (distance > 6 && distance <= 10)
+                else if (distance > distanceSantiReaction*0.6f && distance <= distanceSantiReaction)
                 {
                     //Debug.Log("Algo cerca");
                     color.gizmoColor = Color.blue;                    
                 }
-                else if (distance > 0.1 && distance <= 5)
+                else if (distance > distanceSantiReaction*0.1f && distance <= distanceSantiReaction*0.5f)
                 {
                     //Debug.Log("Muy cerca");
                     color.gizmoColor = Color.red;

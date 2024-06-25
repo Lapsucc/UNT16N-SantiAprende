@@ -69,7 +69,7 @@ public class InterestBarValueController : MonoBehaviour
         if (timerNoActions <= 0.01 && !inactivity)
         {
             //
-            Debug.Log("El timer de inactividad esta en 0 y la inactividad es true");
+            //Debug.Log("El timer de inactividad esta en 0 y la inactividad es true");
             inactivity = true;
             timerNoActions = 0;
         }              

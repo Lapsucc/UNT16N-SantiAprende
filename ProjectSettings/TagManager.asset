@@ -14,6 +14,7 @@ TagManager:
   - MainMenuUI
   - Button
   - InteractiveObjects
+  - ActionPoint
   layers:
   - Default
   - TransparentFX
