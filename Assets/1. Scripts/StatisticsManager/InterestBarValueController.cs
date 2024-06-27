@@ -9,6 +9,9 @@ using UnityEngine.UI;
 // ****************** :::::::::   A TENER EN CUENTAA - El valor de interes, DEBERIA BAJAR al usarlo en cada accion. 04/06____
 public class InterestBarValueController : MonoBehaviour
 {
+    [Header("Game Manager")]
+    public GameManager gameManager;
+    [Header("")]
     [SerializeField] private InstructionValueController probabilityValue;
     [SerializeField] private ClickToMove psicologa;
     [SerializeField] private Slider sliderValue;
@@ -23,6 +26,10 @@ public class InterestBarValueController : MonoBehaviour
     public float timerNoActions;
     public float timerNoActionsIni;
     public bool inactivity = false;
+
+    [Header("Acercamiento")]
+
+    public float reduceAproachValue;
 
     void Start()
     {
@@ -77,7 +84,7 @@ public class InterestBarValueController : MonoBehaviour
         if (value > 0.1f && inactivity)  // REDUCCION DEL VALOR DEL SLIDER CON EL TIEMPO & Si NO SE ESTA MOVIENDO LA PSICOLOGA
         {
             value -= reductionSpeed * Time.deltaTime;
-            if (value < 0.1f) value = 0.1f;
+            if (value < 0.1f) value = 0.1f * gameManager.lossInterestPercentage;
             sliderValue.value = value;
         }
         #endregion
@@ -177,18 +184,20 @@ public class InterestBarValueController : MonoBehaviour
     public void NegativeBarValue(float value, float duration)
     {
         Debug.Log("Reduciendo Valor Barra Interes");
-        StartCoroutine(ChangeBarValueSmoothly(-value, duration)); // Llamar a la corrutina con un valor negativo
+        StartCoroutine(ChangeBarValueSmoothly(-value * gameManager.lossInterestPercentage, duration)); // Llamar a la corrutina con un valor negativo
     }
 
     public void PositiveBarValue(float value, float duration)
     {
         Debug.Log("Aumentando Valor Barra Interes");
-        StartCoroutine(ChangeBarValueSmoothly(value, duration)); // Llamar a la corrutina con un valor positivo
+        StartCoroutine(ChangeBarValueSmoothly(value * gameManager.gainInterestPercentage, duration)); // Llamar a la corrutina con un valor positivo
     }
 
-    public void ReduceBarValue()
+    public void ReduceBarValue() // AproachDecrerseValueController.cs
     {
-        //Debug.Log("Reduciendo Valor por Acercamiento");
-        sliderValue.value -= 0.0005f;
+        if (gameManager.nearPsicologistLost && !gameManager.isSociable) // condicional " SI AFECTA EL ACERCAMIENTO"
+        {
+            sliderValue.value -= reduceAproachValue * gameManager.nearPsicologistLostPercentage * gameManager.lossInterestPercentage;
+        }
     }
 }

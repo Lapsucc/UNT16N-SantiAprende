@@ -7,6 +7,10 @@ using UnityEngine;
 /// </summary>
 public class SantiInteractiveObjectController : MonoBehaviour
 {
+    [Header("Game Manager")]
+    public GameManager gameManager;
+    [Header("")]
+
     public Transform santiAction;
 
     public RandomMovement santiAgent;
@@ -20,6 +24,10 @@ public class SantiInteractiveObjectController : MonoBehaviour
     public bool isObjectActive = true;
     public bool isInAction = false;
 
+    [Header("Valor incremento")]
+    public float value;
+    public float time;
+
     private void Start()
     {
         timer = actionTime;
@@ -27,14 +35,14 @@ public class SantiInteractiveObjectController : MonoBehaviour
 
     public void Update()
     {
-        if (!isInAction)
+        if (!isInAction && !santiAgent.movingAwayFromPsicologist)
         {
             float distance = Vector3.Distance(santiAction.position, santiAgent.transform.position);
             if (distance < actionDistance && isObjectActive && !santiAgent.movingAwayFromPsicologist)
             {
                 isFree = false;
                 StartCoroutine(OnActionObject());
-                Debug.Log("Estoy dentro de la distancia de acción");
+                //Debug.Log("Estoy dentro de la distancia de acción");
             }
         }
     }
@@ -47,7 +55,7 @@ public class SantiInteractiveObjectController : MonoBehaviour
             {
                 isObjectActive = false;
                 timer = actionTime; // Reinicia el timer al valor de acción inicial
-                Debug.Log("ONTRIGGER ENTER");
+                //Debug.Log("ONTRIGGER ENTER");
             }
         }
     }
@@ -56,8 +64,7 @@ public class SantiInteractiveObjectController : MonoBehaviour
     {
         if (other.CompareTag("Kid"))
         {
-            Debug.Log("ON TRIGGER STAY");
-
+            //Debug.Log("ON TRIGGER STAY");
             if (!isInAction)
             {
                 timer -= Time.deltaTime;
@@ -80,8 +87,8 @@ public class SantiInteractiveObjectController : MonoBehaviour
             yield return null;
         }
         // Ejecuta la acción cuando llega al destino
-        accionObjeto.PositiveBarValue(0.2f, 5);
-        yield return new WaitForSeconds(5); // Espera durante 5 segundos        
+        accionObjeto.PositiveBarValue(value * gameManager.santiObjectGP * gameManager.gainInterestPercentage, time);
+        yield return new WaitForSeconds(5); 
 
         santiAgent.setTimer();
     }
@@ -89,7 +96,7 @@ public class SantiInteractiveObjectController : MonoBehaviour
     public IEnumerator GetPositiveInterest()
     {
         isInAction = true;        
-        yield return new WaitForSeconds(10f); // Espera durante 10 segundos
+        yield return new WaitForSeconds(10f);
 
         StartCoroutine(ActiveActionObject());
     }

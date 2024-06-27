@@ -7,15 +7,15 @@ using UnityEngine;
 
 public class AproachDecreseValueController : MonoBehaviour
 {
-    [Header("Reduccion Valor Cercania")]
+    [Header("Game Manager")]
+    public GameManager gameManager;
 
+    [Header("Reduccion Valor Cercania")]
     public InterestBarValueController reducedValue;
     public GameObject psicologist;
     public DrawRadiusKid color;
 
     public float distanceSantiReaction;
-
-    public bool isSociable = true;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class AproachDecreseValueController : MonoBehaviour
 
     void Update()
     {
-        if (!isSociable)
+        if (!gameManager.isSociable)
         {
             if (psicologist != null)
             {

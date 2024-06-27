@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class StereoController : MonoBehaviour
 {
+    [Header("Game Manager")]
+    public GameManager gameManager;
+    [Header("")]
     public InterestBarValueController accionStereo;
     public Transform actionLocationStereo;
     public ClickToMove movePsic;
@@ -38,7 +41,7 @@ public class StereoController : MonoBehaviour
 
         if (distance < 1 && !action)
         {
-            StartCoroutine(DoingVentanaAction());
+            StartCoroutine(DoingStereoAction());
         }
     }
 
@@ -51,10 +54,17 @@ public class StereoController : MonoBehaviour
         }
     }
 
-    IEnumerator DoingVentanaAction()
+    IEnumerator DoingStereoAction()
     {
+        Debug.Log("Accion Stereo");
+
         action = true;
-        accionStereo.PositiveBarValue(value, duration);
+
+        if (gameManager.likesMusic)
+        {
+            accionStereo.PositiveBarValue(value * gameManager.MusicGP * gameManager.gainInterestPercentage, duration);
+        }
+
         yield return new WaitForSeconds(1); // Ajustar con la duracion de la accion o ANIMACION 
     }
 }

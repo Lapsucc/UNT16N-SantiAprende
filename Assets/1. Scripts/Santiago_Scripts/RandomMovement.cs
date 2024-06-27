@@ -1,13 +1,18 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class RandomMovement : MonoBehaviour
 {
+    [Header("Game Mnager")]
+    public GameManager gameManager;
+
     public float minWanderRadius = 5f;
     public float maxWanderRadius = 10f;
-    public float wanderTimer = 5f;
+    public float wanderTimer;
     public float stuckThreshold = 3f; // Tiempo en segundos antes de considerar que el agente está atascado
     public float safeDistance = 5f; // Distancia mínima al psicologist para moverse en dirección contraria
+    public float speedNavMesh;
 
     public NavMeshAgent agent;
     public GameObject psicologist; //2506 -Antisocial
@@ -25,17 +30,18 @@ public class RandomMovement : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        timer = wanderTimer;
+        timer = wanderTimer * gameManager.timerSetDestination;
         stuckTimer = 0f;
         isMoving = false;
         movingAwayFromPsicologist = false;
         lastPosition = transform.position;
-        isSociable = GetComponent<AproachDecreseValueController>().isSociable;
+        // Elimine isSocialble
         SetNewDestination();
     }
 
     void Update()
     {
+        agent.speed = speedNavMesh * gameManager.speedNavmeshP;
         timer -= Time.deltaTime;
 
         bool anyActionInProgress = false;
@@ -80,10 +86,10 @@ public class RandomMovement : MonoBehaviour
                     isMoving = false;
                     timer = wanderTimer;
 
-                    // Si estaba alejándose del psicologist y ha terminado, reiniciar el movimiento normal
+                    // Si estaba alejándose del psicologist y ha terminado, iniciar la corrutina para reiniciar el movimiento normal
                     if (movingAwayFromPsicologist)
                     {
-                        movingAwayFromPsicologist = false;
+                        StartCoroutine(ResetMovingAwayFromPsicologist());
                     }
                 }
             }
@@ -98,7 +104,7 @@ public class RandomMovement : MonoBehaviour
         }
 
         // Lógica para moverse en dirección contraria al psicologist
-        if (!isSociable && !movingAwayFromPsicologist && !anyActionInProgress)
+        if (!gameManager.isSociable && !movingAwayFromPsicologist && !anyActionInProgress)
         {
             float distanceToPsicologist = Vector3.Distance(transform.position, psicologist.transform.position);
             if (distanceToPsicologist < safeDistance)
@@ -112,7 +118,6 @@ public class RandomMovement : MonoBehaviour
     {
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
-            Debug.Log("Movimiento NORMAL");
             Vector3 randomPosition = GetRandomNavMeshPositionWithinRange(transform.position, minWanderRadius, maxWanderRadius);
             agent.SetDestination(randomPosition);
             isMoving = true;
@@ -127,7 +132,7 @@ public class RandomMovement : MonoBehaviour
         NavMeshHit hit;
         if (NavMesh.SamplePosition(newDestination, out hit, maxWanderRadius, NavMesh.AllAreas))
         {
-            Debug.Log("Moviéndose en dirección contraria al psicologist");
+            Debug.Log("Moviéndose en dirección contraria al psicologist GM");
             agent.SetDestination(hit.position);
             isMoving = true;
             movingAwayFromPsicologist = true;
@@ -136,7 +141,6 @@ public class RandomMovement : MonoBehaviour
         }
         else
         {
-            // Si no se encuentra una posición válida, buscar una nueva dirección
             SetNewDestination();
         }
     }
@@ -166,7 +170,6 @@ public class RandomMovement : MonoBehaviour
 
     public void SantiMoveToAction(Vector3 santiActionPosition)
     {
-        Debug.Log("MOVIENDOSE");
         agent.SetDestination(santiActionPosition);
         isMoving = true;
         stuckTimer = 0f;
@@ -175,5 +178,11 @@ public class RandomMovement : MonoBehaviour
     public void setTimer()
     {
         timer = 0.5f;
+    }
+
+    private IEnumerator ResetMovingAwayFromPsicologist()
+    {
+        yield return new WaitForSeconds(2f);
+        movingAwayFromPsicologist = false;
     }
 }

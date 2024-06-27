@@ -1,11 +1,11 @@
 {
-    "lastUpdated": -8584828703355550235,
-    "profileId": "Daniel",
+    "lastUpdated": -8584821757854689293,
+    "profileId": "Sneider",
     "numeroEjemplo": 0,
     "camPos": {
-        "x": -100.159912109375,
+        "x": -100.47541046142578,
         "y": 1.0,
-        "z": 102.45587921142578
+        "z": 108.91588592529297
     },
     "accion": {
         "keys": [
@@ -23,5 +23,5 @@
             false
         ]
     },
-    "santiProfileId": 5
+    "santiProfileId": 1
 }

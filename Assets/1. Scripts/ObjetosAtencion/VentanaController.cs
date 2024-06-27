@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class VentanaController : MonoBehaviour
 {
+    [Header("Game Manager")]
+    public GameManager gameManager;
+    [Header("")]
     public InterestBarValueController accionVentana;
     public Transform actionLocation;
     public ClickToMove movePsic;
@@ -53,8 +56,15 @@ public class VentanaController : MonoBehaviour
 
     IEnumerator DoingVentanaAction()
     {
+        Debug.Log("Haciendo Ventana Action");
+
         action = true;
-        accionVentana.PositiveBarValue(value, duration);
+
+        if (gameManager.likesFreeSpace)
+        {
+            accionVentana.PositiveBarValue(value * gameManager.freeSpaceGP * gameManager.gainInterestPercentage, duration);
+        }
+
         yield return new WaitForSeconds(1); // Ajustar con la duracion de la accion o ANIMACION 
     }
 }

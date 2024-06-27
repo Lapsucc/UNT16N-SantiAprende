@@ -221,7 +221,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 492406825}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6179435
 GameObject:
@@ -2044,7 +2044,6 @@ Transform:
   - {fileID: 1247217724}
   - {fileID: 2120257242}
   - {fileID: 795424831}
-  - {fileID: 547845589}
   - {fileID: 1504874239}
   - {fileID: 2106020961}
   - {fileID: 1339463320}
@@ -2083,7 +2082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 492406825}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &540769853
 GameObject:
@@ -2116,123 +2115,6 @@ Transform:
   m_Father: {fileID: 492406825}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &547845588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 547845589}
-  - component: {fileID: 547845593}
-  - component: {fileID: 547845592}
-  - component: {fileID: 547845596}
-  - component: {fileID: 547845590}
-  m_Layer: 15
-  m_Name: ObjetoMusica
-  m_TagString: InteractiveObjects
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
---- !u!4 &547845589
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547845588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 0.39, z: -2}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 492406825}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &547845590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547845588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 665363265a159d241b81f7524924a161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accionStereo: {fileID: 1907760347}
-  actionLocationStereo: {fileID: 1645944950}
-  movePsic: {fileID: 74324859}
-  value: 0.4
-  duration: 8
-  coolDownAction: 10
-  action: 0
---- !u!23 &547845592
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547845588}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: da4ec9e5fb87fb846938fd91a7752e21, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &547845593
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547845588}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &547845596
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547845588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2.4356947, z: 1.079468}
-  m_Center: {x: 0.000000059604645, y: 0.21784735, z: 0.039733768}
 --- !u!1 &561814899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,10 +3102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665363265a159d241b81f7524924a161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1080450475}
   accionStereo: {fileID: 1907760347}
   actionLocationStereo: {fileID: 1645944950}
   movePsic: {fileID: 74324859}
-  value: 0.4
+  value: 0.3
   duration: 8
   coolDownAction: 10
   action: 0
@@ -3484,6 +3367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ac53f748c5d7a4dad516309fba3990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1080450475}
   santiAction: {fileID: 1631167083}
   santiAgent: {fileID: 868371741}
   accionObjeto: {fileID: 1907760347}
@@ -3493,6 +3377,8 @@ MonoBehaviour:
   isFree: 1
   isObjectActive: 1
   isInAction: 0
+  value: 0.2
+  time: 5
 --- !u!23 &842506336
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3932,11 +3818,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad9d578e57ed14448ac36ab5842ac14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1080450475}
   minWanderRadius: 5
   maxWanderRadius: 10
   wanderTimer: 5
   stuckThreshold: 3
   safeDistance: 3
+  speedNavMesh: 3.5
   agent: {fileID: 0}
   psicologist: {fileID: 74324853}
   isSociable: 0
@@ -3979,11 +3867,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae2dace101a1aa4aa52b972a1e5f323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1080450475}
   reducedValue: {fileID: 1907760347}
   psicologist: {fileID: 74324853}
   color: {fileID: 868371745}
   distanceSantiReaction: 10
-  isSociable: 0
 --- !u!114 &868371745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4492,6 +4380,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sProfileID: {fileID: 853155815}
   santiProfileID: 0
+  isSociable: 0
+  gainInterestPercentage: 0
+  lossInterestPercentage: 0
+  santiActionGP: 0
+  santiObjectGP: 0
+  likesMusic: 0
+  MusicGP: 0
+  likesFreeSpace: 0
+  freeSpaceGP: 0
+  likesLights: 0
+  lightsGP: 0
+  nearPsicologistLost: 0
+  nearPsicologistLostPercentage: 0
+  speedNavmesh: 1
+  timerSetDestination: 5
 --- !u!1 &1082007716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5284,6 +5187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ac53f748c5d7a4dad516309fba3990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1080450475}
   santiAction: {fileID: 909351582}
   santiAgent: {fileID: 868371741}
   accionObjeto: {fileID: 1907760347}
@@ -5293,6 +5197,8 @@ MonoBehaviour:
   isFree: 1
   isObjectActive: 1
   isInAction: 0
+  value: 0.2
+  time: 5
 --- !u!23 &1247217727
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5859,7 +5765,7 @@ Transform:
   - {fileID: 1475335436}
   - {fileID: 1749868103}
   m_Father: {fileID: 492406825}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1359802458
 GameObject:
@@ -6236,7 +6142,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 492406825}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1458655055
 GameObject:
@@ -6506,8 +6412,8 @@ GameObject:
   m_Name: ObjetoVentana
   m_TagString: InteractiveObjects
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 5
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1504874239
 Transform:
@@ -6523,7 +6429,7 @@ Transform:
   m_Children:
   - {fileID: 1140800490}
   m_Father: {fileID: 492406825}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1504874240
 MonoBehaviour:
@@ -6537,6 +6443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f9073e470277b4b881a33e45a6a49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1080450475}
   accionVentana: {fileID: 1907760347}
   actionLocation: {fileID: 1140800490}
   movePsic: {fileID: 74324859}
@@ -6552,7 +6459,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504874238}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -7163,6 +7070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ac53f748c5d7a4dad516309fba3990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1080450475}
   santiAction: {fileID: 1241123029}
   santiAgent: {fileID: 868371741}
   accionObjeto: {fileID: 1907760347}
@@ -7172,6 +7080,8 @@ MonoBehaviour:
   isFree: 1
   isObjectActive: 1
   isInAction: 0
+  value: 0.2
+  time: 5
 --- !u!23 &1664582664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8277,6 +8187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d292d1dddae364f85455d8e97b88b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1080450475}
   probabilityValue: {fileID: 1082007718}
   psicologa: {fileID: 74324859}
   sliderValue: {fileID: 1753324150}
@@ -8288,6 +8199,7 @@ MonoBehaviour:
   timerNoActions: 5
   timerNoActionsIni: 0
   inactivity: 0
+  reduceAproachValue: 0.0005
 --- !u!1 &2004812976
 GameObject:
   m_ObjectHideFlags: 0
@@ -8858,7 +8770,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 492406825}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2120257237
 GameObject:
