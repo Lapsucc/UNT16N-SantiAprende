@@ -95,8 +95,8 @@ public class GameManager : MonoBehaviour
             lightsGP = 1f;
             nearPsicologistLost = true;
             nearPsicologistLostPercentage = 1;
-            speedNavmeshP = 1;
-            timerSetDestination = 1;
+            speedNavmeshP = 0.7f;
+            timerSetDestination = 5;
         }
     }
 }

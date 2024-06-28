@@ -3819,8 +3819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1080450475}
-  minWanderRadius: 5
-  maxWanderRadius: 10
+  minWanderRadius: 4
+  maxWanderRadius: 6
   wanderTimer: 5
   stuckThreshold: 3
   safeDistance: 3
@@ -4393,8 +4393,8 @@ MonoBehaviour:
   lightsGP: 0
   nearPsicologistLost: 0
   nearPsicologistLostPercentage: 0
-  speedNavmesh: 1
-  timerSetDestination: 5
+  speedNavmeshP: 0
+  timerSetDestination: 1
 --- !u!1 &1082007716
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,12 +11,12 @@ public class RandomMovement : MonoBehaviour
     public float maxWanderRadius = 10f;
     public float wanderTimer;
     public float stuckThreshold = 3f; // Tiempo en segundos antes de considerar que el agente está atascado
-    public float safeDistance = 5f; // Distancia mínima al psicologist para moverse en dirección contraria
+    public float safeDistance = 5f;   // Distancia mínima al psicologist para moverse en dirección contraria
     public float speedNavMesh;
 
     public NavMeshAgent agent;
-    public GameObject psicologist; //2506 -Antisocial
-    public bool isSociable; // Condición para moverse lejos del psicologist
+    public GameObject psicologist;    // 2506 -Antisocial
+    public bool isSociable;           // Condición para moverse lejos del psicologist
 
     private float timer;
     private float stuckTimer;
@@ -30,7 +30,7 @@ public class RandomMovement : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        timer = wanderTimer * gameManager.timerSetDestination;
+        
         stuckTimer = 0f;
         isMoving = false;
         movingAwayFromPsicologist = false;
@@ -41,6 +41,7 @@ public class RandomMovement : MonoBehaviour
 
     void Update()
     {
+        wanderTimer = gameManager.timerSetDestination; //
         agent.speed = speedNavMesh * gameManager.speedNavmeshP;
         timer -= Time.deltaTime;
 
